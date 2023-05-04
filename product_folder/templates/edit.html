@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<style>
+  form{
+  border : 1px solid black;
+  padding : 1em;
+  margin-left : 24em;
+  margin-right : 20em;
+  margin-top : 1em;
+  background-color : DimGrey;
+  color : white;
+  font-family : times new roman;
+  padding-left : 13em;
+  }
+</style>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" style="background-color:dodgerblue;border-color:dodgerblue;color:white;width:10em;padding:0.5em;margin-left:8em;">
+  </form>
+{% endblock %}
